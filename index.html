@@ -4,14 +4,14 @@
     <title>Learn Enough JavaScript</title>
     <meta charset="utf-8">
     <script>
-      alert("piggy is dumb!");
-      let firstName = "Niarg";
-      let lastName = "Thor";
-      console.log(firstName, lastName);
+      const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                             "Thursday", "Friday", "Saturday"];
+      let now = new Date();
+      let dayName = daysOfTheWeek[now.getDay()];
+      alert(`Hello, world! Happy ${dayName}.`);
     </script>
   </head>
   <body>
-    <h1>Cooking with Piggy</h1>
-    <p>This page includes an alert written in JavaScript.</p>
+
   </body>
 </html>

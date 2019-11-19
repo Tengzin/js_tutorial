@@ -25,4 +25,16 @@ for (let i = 0; i < words.length; i++) {
     }
 }
 
+// Using Map
+uniques = new Map();
+for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let val = uniques.get(word);
+    if (val > 0) {
+        uniques.set(word, val+1);
+    } else {
+        uniques.set(word, 1);
+    }
+}
+
 console.log(uniques);

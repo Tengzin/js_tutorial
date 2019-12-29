@@ -54,5 +54,23 @@ console.log([1, 2, 3, 4, 5, 6].filter(n => n % 2 === 0));
 
 // Filter version
 function functionalSingles(elements) {
-    
+    return elements.filter(element => element.split(/\s+/).length == 1);
 }
+console.log(functionalSingles(states));
+function filterInclude(elements) {
+    return elements.filter(element => element.includes("Dakota"));
+}
+console.log(filterInclude(states));
+
+// Reduce
+// sum numbers in an array
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// imperative version
+function imperativeSum(elements) {
+    let total = 0;
+    elements.forEach(function(n) {
+        total += n;
+    });
+    return total;
+}
+console.log(imperativeSum(numbers));

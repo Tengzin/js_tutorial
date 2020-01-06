@@ -74,3 +74,37 @@ function imperativeSum(elements) {
     return total;
 }
 console.log(imperativeSum(numbers));
+// sum: Functional solution
+function functionalSum(elements) {
+    return elements.reduce((total, n) => { return total += n; });
+}
+console.log(functionalSum(numbers));
+
+// Lengths of each state
+// Imperative version
+function imperativeLengths(elements) {
+    let lengths = {};
+    elements.forEach(function(element) {
+        lengths[element] = element.length;
+    });
+    return lengths;
+}
+console.log(imperativeLengths(states));
+
+// Functional version
+function functionalLengths(elements) {
+    return elements.reduce((lengths, element) => {
+        lengths[element] = element.length;
+        return lengths;
+    }, {});
+}
+console.log(functionalLengths(states));
+
+// Product of elements in an array
+function productList(elements) {
+    return elements.reduce((product, element) => {
+        product *= element;
+        return product;
+    }, 1);
+}
+console.log(productList(numbers));

@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+// comments are done with backslashes
+/* or use this
+*/
+
+console.log("hello, world!"); // printing
+
+// vars in ES6
+let firstName = "Mike";
+let swag = "Andrew";
+// var still works
+var niarg = "cool";
+
+// interpolation of strings
+let full = `${swag} is ${niarg}`;
+console.log(full);
+console.log(niarg, swag); //auto inserts a space between the 2
+
+// Almost everything in Js is an object, including strings
+// Can access attributes with .
+let len = "swag".length;
+console.log(len);
+console.log("1" == 1);
+console.log("1" === 1); // use triple 
+
+// ifs
+if ("swag".length < 6) {
+    console.log("too short");
+}
+
+// Methods, need () even if no args
+console.log("HONEY".toLowerCase());
+// includes
+var str = "to be or not to be";
+console.log(str.includes("to be"));
+
+// for loop
+for (let i = 0; i < niarg.length; i++) {
+    console.log(niarg.charAt(i));
+    console.log(niarg[i]);
+}
+
+
